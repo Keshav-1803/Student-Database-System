@@ -51,7 +51,7 @@ public class Std_DBMS {
                else {
                   System.out.println("Student not Found.");
                }
-               System.out.println("###################################");
+               System.out.println("_________________________________________");
                break;
 
             case 4:
@@ -73,7 +73,7 @@ public class Std_DBMS {
                System.exit(0);
                input.close();
                break;
-               
+
             default:
                System.out.println("Enter Proper Choise.");
                break;
