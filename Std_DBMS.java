@@ -29,17 +29,9 @@ public class Std_DBMS {
                System.out.print("Enter Your Marks: ");
                double marks = input.nextDouble();
 
-               if (marks < 0) {
-                  System.out.println("Error: Marks cannot be negative.");
-               }
-               else if (database.containsKey(rollNo)) {
-                  System.out.println("Error: Roll number already exists.");
-               }
-               else {
-                  student std = new student(name, rollNo, age, marks);
-                  database.put(rollNo, std);
-                  System.out.println("Student Added to the Database Successfully.");
-               }
+               student std = new student(name, rollNo, age, marks);
+               database.put(rollNo, std);
+               System.out.println("Student Added to the Database Successfully.");
                break;
               
             case 2:
@@ -48,6 +40,7 @@ public class Std_DBMS {
                   i.viewData();
                }
                break;
+
             case 3:
                System.out.print("Enter your Roll No.: ");
                int roll = input.nextInt();
@@ -60,6 +53,7 @@ public class Std_DBMS {
                }
                System.out.println("###################################");
                break;
+
             case 4:
                int totalStudent = database.size();
                double totalMarks = 0;
@@ -74,10 +68,12 @@ public class Std_DBMS {
                   System.out.println("No students in the database.");
                }
                break;
+
             case 5:
                System.exit(0);
                input.close();
                break;
+               
             default:
                System.out.println("Enter Proper Choise.");
                break;
